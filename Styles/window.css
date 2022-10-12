@@ -1,11 +1,14 @@
 @font-face {
     font-family: 'M95';
-    src: url('/font/W95FA.otf');
+    src: url('/Font/W95FA.otf');
+    src:local('/Font/W95FA.otf');
+    src:url('/Font/w95fa.woff') format("woff");
+    src: url('/Font/w95fa.woff2');
 }
 
 body {
+    display:inline;
     background-color: #008282;
     font-family: 'M95';
     font-style: normal;
-    margin: 0%;
 }
