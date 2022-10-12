@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'M95';
+    src: url('/font/W95FA.otf');
+}
+
+body {
+    background-color: #008282;
+    font-family: 'M95';
+    font-style: normal;
+    margin: 0%;
+}
