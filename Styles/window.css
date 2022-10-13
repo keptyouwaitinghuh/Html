@@ -1,14 +1,52 @@
-@font-face {
-    font-family: 'M95';
-    src: url('/Font/W95FA.otf');
-    src:local('/Font/W95FA.otf');
-    src:url('/Font/w95fa.woff') format("woff");
-    src: url('/Font/w95fa.woff2');
+.window{
+    display:grid;
+    grid-template-rows: 26px 26px;
+    padding:1%;
+    position:absolute;
+    background: #C3C3C3;
+    box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E, inset 4px 4px 0px #B1B1B1;
 }
 
-body {
-    display:inline;
-    background-color: #008282;
-    font-family: 'M95';
-    font-style: normal;
+
+
+.window .up{
+    background-color:blue;
+    min-width:100%;
+    height:24px;
+    color:white;
+}
+
+.window .up .text{
+    position:relative;
+    top:5px;
+    margin-left:5px;
+    float:left; 
+}
+
+.window .up img{
+    float: left;
+    max-height:90%;
+    margin-left:2px;
+    margin-right:2px;
+}
+
+.window .up button{
+    margin-top: 2.5px;
+    color:black;
+    width:20px;
+    height:20px;
+    float:right;
+    text-align: center;
+}
+
+hr{
+    margin-top:20px;
+    width:98%;
+    height:1px;
+}
+
+.EVH{
+    margin-top:4px;
+    margin-right:8px;
+    float:left;
 }

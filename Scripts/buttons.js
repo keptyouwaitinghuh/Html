@@ -1,4 +1,4 @@
-buttons = document.querySelectorAll(".button");
+buttons = document.getElementsByTagName("button");
 for(b of buttons)
 {
     b.addEventListener("mousedown", mousedown);

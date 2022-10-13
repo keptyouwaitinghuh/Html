@@ -1,47 +1,53 @@
 .panel {
-    display:block;
+    display:grid;
+    grid-template-columns: 102px repeat(5,auto) 220px;
+    grid-auto-columns: minmax(102px, 150px);
+    grid-template-rows: 48px;
     position:absolute;
     bottom: 0px;
     width: 100%;
     height: 50px;
     background-color: #C3C3C3;
     box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+
 }
 
-.button#start {
+.panel button#start {
+    border:none;
+    background-color:#C3C3C3;
     box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
-    margin: 5px;
-    height: 70%;
+    margin: 6px;
+    margin-top:7px;
+    height: 70%;    
     width: 100px;
     font-size: 1.5em;
     text-align: left;
+    float:left;
 }
 
-.button img {
+.panel button img {
     margin: 2%;
     max-height: 90%;
     float: left;
 }
 
-.panel .button .text {
-    position: relative;
-    margin-top:7%;
-    top: 5px;
+.panel button .text {
+    margin-top:4%;
+    font-family: "M95";
     margin-left:40%;
-
 }
 
 
 #data{
-    position:absolute;
-    margin: 5px;
-    right: 0.5%;
-    bottom:6%;
+    margin-top:3px;
+    margin-right:0px;
+    margin-left:10px;
     background: #C3C3C3;
     box-shadow: inset 2px 2px 0px #262626, inset -2px -2px 0px #F0F0F0, inset 4px 4px 0px #7E7E7E;
-    height:70%;
+    height:40px;
     width:200px;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    float:right;
 }
 #data img{
     float:left;
@@ -50,5 +56,5 @@
 }
 
 #data .text{
-    margin-top: 9px;
+    margin-top:9px;
 }

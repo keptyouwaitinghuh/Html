@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'M95';
+    src: url('/Font/W95FA.otf');
+    src:local('/Font/W95FA.otf');
+    src:url('/Font/w95fa.woff') format("woff");
+    src: url('/Font/w95fa.woff2');
+    src:url('/Font/MS\ Sans\ Serif\ 8pt.ttf')
+}
+
+body {
+    display:inline;
+    background-color: #008282;
+    font-family: 'M95';
+    font-style: normal;
+}
+button {
+    border: none;
+    background-color: #C3C3C3;
+    box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
+}
