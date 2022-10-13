@@ -9,7 +9,7 @@
 }
 
 .button#start {
-    border-style: outset;
+    box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E;
     margin: 5px;
     height: 70%;
     width: 100px;
@@ -23,10 +23,14 @@
     float: left;
 }
 
-.button .text {
-    margin-top: 7%;
+.panel .button .text {
+    position: relative;
+    margin-top:7%;
+    top: 5px;
     margin-left:40%;
+
 }
+
 
 #data{
     position:absolute;
