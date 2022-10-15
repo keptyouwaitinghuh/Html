@@ -1,7 +1,21 @@
 var buttonsTmp = document.querySelectorAll("button");
 var titles = document.querySelectorAll("button.title");
 var buttons = [];
-currentWindow = null;
+var currentWindow = null;
+var mass = document.querySelectorAll(".window .up button");
+
+for(m of mass)
+{
+	console.log("button in up " + m.innerHTML);
+	m.addEventListener("mouseup", hide);
+}
+
+function hide()
+{
+	currentWindow.style.display = "none";
+	currentWindow = null;
+}
+
 for(b of buttonsTmp)
 {
     buttons.push(b);
@@ -115,15 +129,13 @@ function abort(e)
 
 function doubleclick(i)
 {
-	let mass = [];
-
 	return function()
 	{
-		currentWindow.style.display="none";	
+		if(currentWindow!=null)currentWindow.style.display="none";	
 		wind = document.getElementById("infowindow");
 		wind.style.display="block";
 		wind.style.top="50px";
-		wind.style.left="100px";
+		wind.style.left="150px";
 		currentWindow=wind;
 	}
 }
