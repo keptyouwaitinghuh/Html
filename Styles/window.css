@@ -1,8 +1,10 @@
 .window{
     display:grid;
     grid-template-rows: 26px 26px;
-    padding:1%;
+    padding:2px;
     position:absolute;
+    top:50px;
+    left:50px;
     background: #C3C3C3;
     box-shadow: inset -2px -2px 0px #262626, inset 2px 2px 0px #F0F0F0, inset -4px -4px 0px #7E7E7E, inset 4px 4px 0px #B1B1B1;
 }
@@ -11,7 +13,7 @@
 
 .window .up{
     background-color:blue;
-    min-width:100%;
+    width:calc(100% - 2px);
     height:24px;
     color:white;
 }
@@ -25,7 +27,11 @@
 
 .window .up img{
     float: left;
+    max-width:90%;
     max-height:90%;
+    width:20px;
+    height:20px;
+    margin-top:2px;
     margin-left:2px;
     margin-right:2px;
 }
@@ -37,16 +43,23 @@
     height:20px;
     float:right;
     text-align: center;
+    margin-left:2px;
 }
 
 hr{
-    margin-top:20px;
+    margin-top:22px;
     width:98%;
     height:1px;
 }
 
 .EVH{
     margin-top:4px;
-    margin-right:8px;
+    margin-left:8px;
     float:left;
+    font-size: 14px;
+}
+
+.window#form{
+    width: 350px;
+    height: 540px
 }

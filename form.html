@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <div class = window id="form" style="width:350px; height:400px">
+        <div class = window id="form">
 
             <div class=up>
                 <img src="/Icons/keyboard.png" alt="not found">
@@ -29,13 +29,15 @@
             </div>
 
             
-            <form method="post" action="">
+            <form>
                 <div>
                     <div class=name>
                         Регистрация
                     </div>
                 </div>
+
                 <div></div>
+
                     <div class=name>
                         Фамилия
                     </div>
@@ -45,16 +47,19 @@
                     <div class=name>
                         Имя
                     </div>
+
                     <input type="text" />
 
                     <div class=name>
                         Отчество
                     </div>
+
                     <input type="text" />
 
                     <div class=name>
                         Email
                     </div>
+
                     <input type="text" />
 
                     <div id="row" style="grid-column-start:1; grid-column-end: 3;">
@@ -77,15 +82,52 @@
 
                     <input type="text"/>
 
-                    <div style="grid-column-start: 1; grid-column-end: 3;">
-                        <div class = name>Конкурсы</div>
+                    <div style="grid-column-start: 1; grid-column-end: 3; " id="competitions">
+                        <div class = name style="font-size: 13px;">Конкурсы</div>
+                        <div></div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Data Science</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>.Net</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Software automation testing</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Java</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Mobile development</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Web-разработка</div>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" />
+                            <div class=name>Веб-приложения на php</div>
+                        </div>
                         
                     </div>
+                    <div style="grid-column-start: 1; grid-column-end: 3; text-align:right;">
+                    <button>Подать заявку</button>
+                    </div>
+                    <script src="Scripts/buttons.js"></script>
             </form>
-
-
         </div>
-        
 
     </body>
 </html>
