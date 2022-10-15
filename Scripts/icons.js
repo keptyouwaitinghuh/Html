@@ -1,16 +1,18 @@
 icons = document.querySelectorAll(".label");
+
 body = document.getElementsByTagName("body")[0];
 body.addEventListener("click", abort, true);
 body.addEventListener("click", deselect, true);
+var ind = 0;
 for(i of icons)
 {
     i.addEventListener("click", select(i), true);
-	img = i.getElementsByTagName("img")[0];
-	img.addEventListener("drop", drop(i));
+	i.addEventListener("dblclick", doubleclick());
     console.log(i.innerText);
+	++ind;
 }
 
-var current;
+var current = null;
 var abortion = true;
 
 function select(icon)
@@ -47,11 +49,12 @@ function abort(e)
 	console.log("abort " + abortion);
 }
 
-function drop(icon)
+function doubleclick(i)
 {
-	return (event)=>
-	{
-		console.log("drop.target" + event.target);
+	let mass = [];
 
+	return function()
+	{
+		document.getElementById("infowindow").style.display="block";
 	}
 }

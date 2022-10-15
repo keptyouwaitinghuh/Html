@@ -2,58 +2,220 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>BitCup 2022</title>
-    <link rel="stylesheet" type="text/css" href="Styles/icon.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/desktop.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/display.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/panel.css" />
+	<meta charset="utf-8">
+	<title>BitCup 2022</title>
+	<link rel="stylesheet" type="text/css" href="Styles/icon.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/desktop.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/display.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/panel.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/info.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/form.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/window.css" />
 </head>
 
 <body>
-    <div class=desktop>
-        <div class=label style="grid-row-start: 1;">
-            <img src="Icons/computer.png" alt="not found">
-            <div class=text>BitCup 2022</div>
-        </div>
+	<div class=desktop>
+		<div class=label id="BitCup" style="grid-row-start: 1;">
+			<img src="Icons/computer.png" alt="not found">
+			<div class=text>BitCup 2022</div>
+		</div>
 
-        <div class=label style="grid-row-start: 2;">
-            <img src="Icons/folder.png" alt="not found">
-            <div class=text> Directions</div>
-        </div>
+		<div class=label id="Directions" style="grid-row-start: 2;">
+			<img src="Icons/folder.png" alt="not found">
+			<div class=text>Направления</div>
+		</div>
 
-        <div class=label style="grid-row-start: 3;">
-            <img src="Icons/folder.png" alt="not found">
-            <div class=text>Steps</div>
-        </div>
+		<div class=label id="Steps" style="grid-row-start: 3;">
+			<img src="Icons/folder.png" alt="not found">
+			<div class=text>Этапы</div>
+		</div>
 
-        <div class=label style="grid-row-start: 4;">
-            <img src="Icons/folder.png" alt="not found">
-            <div class=text>Sponsors</div>
-        </div>
+		<div class=label id="Sponsors" style="grid-row-start: 4;">
+			<img src="Icons/folder.png" alt="not found">
+			<div class=text>Спонсоры</div>
+		</div>
 
-        <div class=label style="grid-column-start: 20; grid-row-start: 6;">
-            <img src="Icons/bucket.png" alt="not found">
-            <div class=text>FIS</div>
-        </div>
+		<div class=label style="grid-column-start: 20; grid-row-start: 6;">
+			<img src="Icons/bucket.png" alt="not found">
+			<div class=text>FIS</div>
+		</div>
 
-    </div>
-    <div class=panel>
-        <button id="start">
-            <img src="Icons/win.png" alt="notfound">
-            <div class=text>
-                Start
-            </div>
-        </button>
+	</div>
+	<div class=panel>
+		<button id="start">
+			<img src="Icons/win.png" alt="notfound">
+			<div class=text>
+				Start
+			</div>
+		</button>
 
-        <div id="data" style="grid-column-start: 7; grid-row-start: 1;">
-            <img src="Icons/bsuir.png" alt = "not found">
-            <img src="Icons/fcss.png" alt = "not found">
-            <div class=text> 2014-2022 </div>
-        </div>
-    </div>
-    <script src="Scripts/icons.js"></script>
-    <script src="Scripts/buttons.js"></script>
+		<div id="data" style="grid-column-start: 7; grid-row-start: 1;">
+			<img src="Icons/bsuir.png" alt="not found">
+			<img src="Icons/fcss.png" alt="not found">
+			<div class=text> 2014-2022 </div>
+		</div>
+	</div>
+
+	<div id="formwindow" style="display:none;position:absolute;">
+		<div class=window id="form">
+
+			<div class=up>
+				<img src="/Icons/keyboard.png" alt="not found">
+				<div class=text>Form</div>
+				<button>X</button>
+				<button>-</button>
+			</div>
+
+			<div>
+				<div class=EVH>Edit</div>
+				<div class=EVH>View</div>
+				<div class=EVH>Help</div>
+				<hr />
+			</div>
+
+
+			<form>
+				<div>
+					<div class=name>
+						Регистрация
+					</div>
+				</div>
+
+				<div></div>
+
+				<div class=name>
+					Фамилия
+				</div>
+
+				<input type="text" />
+
+				<div class=name>
+					Имя
+				</div>
+
+				<input type="text" />
+
+				<div class=name>
+					Отчество
+				</div>
+
+				<input type="text" />
+
+				<div class=name>
+					Email
+				</div>
+
+				<input type="text" />
+
+				<div id="row" style="grid-column-start:1; grid-column-end: 3;">
+					<div class=name>
+						Уч. заведение
+					</div>
+
+					<input type="text" style="float:left;" />
+
+					<div class=name>
+						Курс
+					</div>
+
+					<input type="text" style="float:left;" />
+				</div>
+
+				<div class=name>
+					Моб. телефон
+				</div>
+
+				<input type="text" />
+
+				<div style="grid-column-start: 1; grid-column-end: 3; " id="competitions">
+					<div class=name style="font-size: 13px;">Конкурсы</div>
+					<div></div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Data Science</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>.Net</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Software automation testing</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Java</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Mobile development</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Web-разработка</div>
+					</div>
+
+					<div>
+						<input type="checkbox" />
+						<div class=name>Веб-приложения на php</div>
+					</div>
+
+				</div>
+				<div style="grid-column-start: 1; grid-column-end: 3; text-align:right;">
+					<button>Подать заявку</button>
+				</div>
+				<script src="Scripts/buttons.js"></script>
+			</form>
+		</div>
+
+	</div>
+	<div id="infowindow" style="display:none; position:absolute;">
+		<div class=window style="width:1000px; height:600px;">
+			<div class=up>
+
+				<img src="Icons/computer.png" alt="not found" />
+
+				<div class=text>
+					Bit-Cup 2022
+				</div>
+
+				<button>X</button>
+				<button>-</button>
+
+			</div>
+
+			<div>
+				<div class=EVH>Edit</div>
+				<div class=EVH>View</div>
+				<div class=EVH>Help</div>
+				<hr/>
+			</div>
+
+			<div class=info>
+				<div class=menu font-family="M95">
+					<button class=title onclick="titleclick">Об олимпиаде</button>
+					<button class=title onclick="titleclick">Направления</button>
+					<button class=title onclick="titleclick">Этапы</button>
+					<button class=title onclick="titleclick">Спосноры</button>
+				</div>
+
+				<div class=infotext>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
+<script src="Scripts/buttons.js"></script>
 <script src="Scripts/icons.js"></script>
+<script src="Descriptions/descriptions.js"></script>
+<sript src="Scripts/menu options.js"></sript>
+
 </html>
