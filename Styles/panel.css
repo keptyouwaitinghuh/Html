@@ -37,7 +37,14 @@
     margin-left:40%;
 }
 
-
+.panel button{
+    margin-left: 12px;
+    margin-top: 7px;
+    height: 70%;
+    font-size: 1.5em;
+    text-align: left;
+    float: left;    
+}
 #data{
     margin-top:3px;
     margin-right:0px;

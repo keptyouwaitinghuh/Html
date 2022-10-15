@@ -84,8 +84,8 @@ body.addEventListener("click", deselect, true);
 var ind = 0;
 for(i of icons)
 {
-    i.addEventListener("click", select(i), true);
-	i.addEventListener("dblclick", doubleclick());
+    i.addEventListener("click", select, true);
+	i.addEventListener("dblclick", doubleclick(ind));
     console.log(i.innerText);
 	++ind;
 }
@@ -93,20 +93,17 @@ for(i of icons)
 var current = null;
 var abortion = true;
 
-function select(icon)
+function select(event)
 {
-	return ()=>
-    {
-		abortion = true;
-		if(current == null) current = icon;
-		if(current != icon)	deselect();
+	abortion = true;
+	if(current == null) current = event.currentTarget;
+	if(current != event.currentTarget)	deselect();
 
-		icon.style.backgroundColor = "blue";
-		icon.querySelector(".text").style.backgroundColor = "blue";
+	event.currentTarget.style.backgroundColor = "blue";
+	event.currentTarget.querySelector(".text").style.backgroundColor = "blue";
 
-		current = icon;	
-		console.log("click " + icon.innerHTML);
-    }
+	current = event.currentTarget;	
+	console.log("click " + event.currentTarget.innerHTML);
 }
 
 function deselect(icon)
@@ -119,6 +116,7 @@ function deselect(icon)
 
 function abort(e)
 {
+	return;
 	if(abortion) 
 	{
 		e.stopPropagation();
@@ -131,12 +129,28 @@ function doubleclick(i)
 {
 	return function()
 	{
-		if(currentWindow!=null)currentWindow.style.display="none";	
+		if(currentWindow!=null)currentWindow.style.display="none";
 		wind = document.getElementById("infowindow");
 		wind.style.display="block";
 		wind.style.top="50px";
 		wind.style.left="150px";
 		currentWindow=wind;
+		
+		click(i)({k:"jojo reference"});
+
+		/*panel = document.getElementsByClassName("panel")[0];
+		let button = document.createElement("button");
+		let img = document.createElement("img");
+		let text = document.createTextNode("Информация");
+		img.setAttribute("src", "Icons/folder.png");
+		img.setAttribute("alt", "not found");
+		button.appendChild(img);
+		button.style.fontFamily='M95';
+		button.appendChild(text);
+		panel.appendChild(button);
+		button.addEventListener("mousedown", mousedown);
+    	button.addEventListener("mouseup", mouseup);
+		console.log("IIIINNNJO " + button.innerHTML);*/
 	}
 }
 
@@ -158,4 +172,25 @@ function click(i)
         textfield.innerText = mass[i];
     }
     
+}
+
+var coll = document.getElementsByClassName(".window .up");
+for(c of coll)
+{
+	c.addEventListener("mousedown", ()=>isMovingWind = true, true);
+	c.addEventListener("mouseup", ()=>isMovingWind = false,true);
+	c.addEventListener("click", move,true);
+
+}
+var isMovingWind;
+
+function move(e)
+{
+	//if(!isMovingWind) return;
+	let div = e.currentTarget.parentNode;
+  	let rect = div.getBoundingClientRect();
+	console.log("crazy rect!!! " + rect.left + " " + rect.top);
+  	let dx = e.pageX - rect.left, dy = e.pageY - rect.top;
+	div.style.left = e.pageX - dx + 'px';
+    div.style.top = e.pageY - dy + 'px';
 }
