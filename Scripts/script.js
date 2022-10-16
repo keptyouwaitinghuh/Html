@@ -75,7 +75,7 @@ function start()
 		currentWindow = form;
     }
 }
-
+//----------------------------------------------------------------------------------------------------------------------------------------
 icons = document.querySelectorAll(".label");
 
 body = document.getElementsByTagName("body")[0];
@@ -116,7 +116,6 @@ function deselect(icon)
 
 function abort(e)
 {
-	return;
 	if(abortion) 
 	{
 		e.stopPropagation();
@@ -153,7 +152,7 @@ function doubleclick(i)
 		console.log("IIIINNNJO " + button.innerHTML);*/
 	}
 }
-
+//----------------------------------------------------------------------------------------------------------------------------------
 var titles=document.querySelectorAll("button.title");
 var ind = 0;
 for(t of titles)
@@ -172,25 +171,4 @@ function click(i)
         textfield.innerText = mass[i];
     }
     
-}
-
-var coll = document.getElementsByClassName(".window .up");
-for(c of coll)
-{
-	c.addEventListener("mousedown", ()=>isMovingWind = true, true);
-	c.addEventListener("mouseup", ()=>isMovingWind = false,true);
-	c.addEventListener("click", move,true);
-
-}
-var isMovingWind;
-
-function move(e)
-{
-	//if(!isMovingWind) return;
-	let div = e.currentTarget.parentNode;
-  	let rect = div.getBoundingClientRect();
-	console.log("crazy rect!!! " + rect.left + " " + rect.top);
-  	let dx = e.pageX - rect.left, dy = e.pageY - rect.top;
-	div.style.left = e.pageX - dx + 'px';
-    div.style.top = e.pageY - dy + 'px';
 }
