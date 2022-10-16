@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'M95';
-    src: url('W95FA.otf');
-    src:local('W95FA.otf');
-    src:url('w95fa.woff');
-    src: url('w95fa.woff2');
-    src:url('MS\ Sans\ Serif\ 8pt.ttf')
+    src: url('Font/W95FA.otf');
+    src:local('Font/W95FA.otf');
+    src:url('Font/w95fa.woff');
+    src: url('Font/w95fa.woff2');
+    src:url('Font/MS\ Sans\ Serif\ 8pt.ttf')
 }
 
 body {
