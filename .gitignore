@@ -1,4 +1,4 @@
-*.png
+#*.png
 *.otf
 *.woff
 *.woff2
